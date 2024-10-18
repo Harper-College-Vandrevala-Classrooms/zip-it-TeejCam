@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.csc.ZipperTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-10-17T23:18:57" hostname="Melissas-MacBook-Pro.local" time="0.01">
+  <properties/>
+  <testcase name="testListOneBigger()" classname="com.csc.ZipperTest" time="0.007"/>
+  <testcase name="testStringListSize()" classname="com.csc.ZipperTest" time="0.0"/>
+  <testcase name="testListTwoBigger()" classname="com.csc.ZipperTest" time="0.0"/>
+  <testcase name="testListSize()" classname="com.csc.ZipperTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
