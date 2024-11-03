@@ -1,6 +1,7 @@
 package com.csc;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Zipper {
 
@@ -45,10 +46,28 @@ public class Zipper {
          else {
             return mergedList;
          }
-
-        //return mergedList;
         
      }
+
+    public static <T> HashMap<String, T> hashmapify(List<String> strList, List<T> listT)
+    {
+        HashMap<String, T> map = new HashMap<>();
+        try {
+            if(strList.size() != listT.size()){
+                throw new IllegalArgumentException();
+            }
+            else {
+                for(int i=0; i<strList.size(); i++) {
+                    map.put(strList.get(i), listT.get(i));
+                }
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Lists must be same size!");
+        }
+        return map;
+
+    }
+
 
     public static void main (String[] args)
     {
@@ -62,6 +81,15 @@ public class Zipper {
         List<String> mergedWords = zip(colors1, colors2);
 
         System.out.println(mergedWords); //[Red, White, Green, Black, Blue, Orange, Pink]
+        List<String> colors = List.of("White", "Black", "Orange", "Pink");
+        List<Integer> nums = List.of(1, 3, 5, 6);
+
+        // This should create {"White" => 1, "Black" => 3, "Orange" => 5, "Pink" => 7}
+        HashMap<String, Integer> map = hashmapify(colors, nums);
+
+        List<String> names = List.of("John", "Mike");
+        List<Double> doubles = List.of(1.3, 2.3, 3.3);
+        HashMap<String, Double> newMap = hashmapify(names, doubles); //should throw exception
     }
 }
 
